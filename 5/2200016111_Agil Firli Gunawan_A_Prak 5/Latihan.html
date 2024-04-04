@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<p id="demo">Display the result here.</p>
+<button onclick="convertTemperature()">Convert Temperature</button>
+
+<script>
+  window.addEventListener('load', function() {
+    alert('Halaman selesai di load');
+  });
+
+  function toFahrenheit(celsius) {
+    return (9/5 * celsius) + 32;
+  }
+
+function convertTemperature() {
+    var celsiusTemperature = 25; 
+    var result = toFahrenheit(celsiusTemperature);
+    document.getElementById('demo').innerHTML = result;
+}
+
+</script>
+</body>
+</html>

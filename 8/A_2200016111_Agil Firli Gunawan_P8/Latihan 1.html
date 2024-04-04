@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn-kiri").click(function() {
+        $("#circle").animate({ left: "-=50px" }, "slow");
+      });
+
+      $("#btn-kanan").click(function() {
+        $("#circle").animate({ left: "+=50px" }, "slow");
+      });
+
+      $("#btn-atas").click(function() {
+        $("#circle").animate({ top: "-=50px" }, "slow");
+      });
+
+      $("#btn-bawah").click(function() {
+        $("#circle").animate({ top: "+=50px" }, "slow");
+      });
+    });
+  </script>
+  <style>
+    #circle {
+      background: #98bf21;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="circle"></div>
+
+  <button id="btn-kiri">Kiri</button>
+  <button id="btn-kanan">Kanan</button>
+  <button id="btn-atas">Atas</button>
+  <button id="btn-bawah">Bawah</button>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    /* Add some basic styling */
+    #hasil-nim,
+    #hasil-nilai,
+    #hasil-pesan {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      $("#btn-cek").click(function() {
+        var nim = $("#nim-input").val();
+        var nilai = parseInt($("#nilai-input").val());
+
+        $("#hasil-nim").text("NIM: " + nim).fadeIn();
+        $("#hasil-nilai").text("Nilai: " + nilai).fadeIn();
+
+        if (nilai > 65) {
+          $("#hasil-pesan").text("Selamat Anda Lulus").fadeIn();
+        } else {
+          $("#hasil-pesan").text("Maaf, Anda Tidak Lulus").fadeIn();
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <label for="nim-input">NIM:</label>
+  <input type="text" id="nim-input">
+
+  <br>
+
+  <label for="nilai-input">Nilai:</label>
+  <input type="text" id="nilai-input">
+
+  <br>
+
+  <button id="btn-cek">Cek</button>
+
+  <br>
+
+  <div id="hasil-nim"></div>
+  <div id="hasil-nilai"></div>
+  <div id="hasil-pesan"></div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn-kirim").click(function() {
+        var nama = $("#nama-input").val();
+        var usia = $("#usia-input").val();
+
+        $("#hasil-nama").text("Nama: " + nama);
+        $("#hasil-usia").text("Usia: " + usia);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <label for="nama-input">Nama:</label>
+  <input type="text" id="nama-input">
+
+  <br>
+
+  <label for="usia-input">Usia:</label>
+  <input type="text" id="usia-input">
+
+  <br>
+
+  <button id="btn-kirim">Kirim</button>
+
+  <br>
+
+  <div id="hasil-nama"></div>
+  <div id="hasil-usia"></div>
+</body>
+
+</html>
